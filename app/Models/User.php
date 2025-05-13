@@ -50,7 +50,7 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
 
-    public function usertatus(){
+    public function userStatus(){
         return $this->belongsTo(UserStatus::class);
     }
 
