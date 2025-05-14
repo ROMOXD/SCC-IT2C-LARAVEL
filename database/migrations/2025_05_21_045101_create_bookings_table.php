@@ -16,10 +16,11 @@ return new class extends Migration
             $table->foreignId('guest_type_id')->constrained('guest_types')->onDelete('cascade');
             $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade');
             $table->foreignId('room_type_id')->constrained('room_types')->onDelete('cascade');
+            $table->foreignId('booking_status_id')->constrained('booking_statuses')->onDelete('cascade');
             $table->string('guest_firstname');
             $table->string('guest_middlename')->nullable();
             $table->string('guest_lastname');
-            $table->string('email')->unique();
+            $table->string('guest_email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });

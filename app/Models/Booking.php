@@ -16,7 +16,8 @@ class Booking extends Model
         'guest_email',
         'guest_type_id',
         'room_id',
-        'room_type',
+        'room_type_id',
+        'booking_status_id',
     ];
 
     public function guestType(){
@@ -29,5 +30,9 @@ class Booking extends Model
 
     public function roomType(){
         return $this->belongsTo(RoomType::class);
+    }
+
+    public function bookingStatus(){
+        return $this->belongsTo(BookingStatus::class);
     }
 }
